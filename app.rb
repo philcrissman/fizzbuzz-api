@@ -8,6 +8,10 @@ get '/fizzbuzzes' do
   (1..100).map{|n| fizzbuzz(n)}.join("\n")
 end
 
+get '/fb' do
+  (1..100).map{|n| fizzbuzz(n)}.join("\n")
+end
+
 get '/fizzbuzz/:n' do |n|
   n = n.to_i
   fizzbuzz(n)
