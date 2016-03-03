@@ -5,23 +5,26 @@ get '/' do
 end
 
 get '/fizzbuzzes' do
-  (1..100).map{|n| fizzbuzz(n)}.join("\n")
+  fizzbuzzes
 end
 
 get '/fb' do
-  (1..100).map{|n| fizzbuzz(n)}.join("\n")
+  fizzbuzzes
 end
 
 get '/fizzbuzz/:n' do |n|
-  n = n.to_i
   fizzbuzz(n)
 end
 
 get '/fb/:n' do |n|
-  n = n.to_i
   fizzbuzz(n)
 end
 
+def fizzbuzzes
+  (1..100).map{|n| fizzbuzz(n)}.join("\n")
+end
+
 def fizzbuzz(n)
+  n = n.to_i
   ({6=>'Fizz',10=>'Buzz',0=>'FizzBuzz'}[n**4%15]||n.to_s)
 end
