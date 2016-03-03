@@ -1,7 +1,7 @@
 require 'sinatra'
 
 get '/' do
-  "<h1>FizzBuzz API</h1><a href='/fizzbuzzes'>/fizzbuzzes</a>\n<a href='/fizzbuzz/1'>/fizzbuzz/1</a>"
+  "<h1>FizzBuzz API</h1><p>Usage:</p><a href='/fizzbuzzes'>/fizzbuzzes</a> or <a href='/fb'>/fb</a><br/><a href='/fizzbuzz/1'>/fizzbuzz/15</a> or <a href='/fb/15'>/fb/15</a>"
 end
 
 get '/fizzbuzzes' do
